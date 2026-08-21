@@ -1,0 +1,18 @@
+{
+  "name": "agent-seo-kit",
+  "version": "1.0.0",
+  "description": "Claude Code skills for SEO and GEO, with every network call going through the Monid tool layer",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "pull": "node scripts/pull-organic.mjs",
+    "classify": "node scripts/classify.mjs",
+    "geo": "node scripts/run-geo.mjs",
+    "geo:opportunities": "node scripts/geo-opportunities.mjs",
+    "geo:ledger": "node scripts/geo-ledger.mjs",
+    "library": "node scripts/build-content-library.mjs",
+    "prospects": "node scripts/prospects-from-geo.mjs",
+    "tracker": "node scripts/tracker.mjs"
+  }
+}

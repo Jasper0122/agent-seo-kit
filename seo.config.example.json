@@ -1,0 +1,48 @@
+{
+  "source": "ahrefs",
+
+  "site": {
+    "domain": "example.com",
+    "brandName": "Example",
+    "brandTerms": ["example", "exampl", "exmaple"],
+    "country": "us"
+  },
+
+  "competitors": [
+    "competitor-a.com",
+    "competitor-b.com",
+    "competitor-c.com"
+  ],
+
+  "limits": {
+    "rowsPerDomain": 50,
+    "minVolume": 50,
+    "maxSpendPerRunUsd": 10
+  },
+
+  "bands": {
+    "head": [1, 3],
+    "striking": [4, 20],
+    "depth": [21, 60]
+  },
+
+  "geo": {
+    "provider": "blockrun.ai",
+    "endpoint": "/api/v1/exa/answer",
+    "gapSeconds": 1.5,
+    "recommendationWindow": 240
+  },
+
+  "excludeKeywordPatterns": [
+    "porn", "xxx", "nsfw", "onlyfans", "nude",
+    "torrent", "crack", "keygen", "pirate",
+    "downloader", "mp3 download", "free download",
+    "proxy free", "free proxy"
+  ],
+
+  "outreach": {
+    "partnerHosts": [],
+    "platformHosts": [],
+    "directoryHosts": []
+  }
+}

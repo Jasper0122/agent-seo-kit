@@ -1,0 +1,7 @@
+node_modules/
+seo.config.json
+data/*
+!data/geo-registry.example.json
+!data/.gitkeep
+*.log
+.DS_Store

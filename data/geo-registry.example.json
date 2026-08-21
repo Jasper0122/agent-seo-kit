@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "note": "Replace every row below. These are shape examples, not a starter set: a registry of questions nobody asked measures nothing.",
+
+  "howToBuildThis": [
+    "Take a real search term you already rank for, or a gap keyword from data/intake.json.",
+    "Search that TERM on Reddit (scripts/questions-for.mjs does this for you) and read how people actually phrase it.",
+    "Paste their phrasing in as the query. Do not reword it into your vocabulary.",
+    "Record sourceType honestly: exact is the asker's own words, naturalized is your rewording, synthesized is your framing over evidenced pain. Prefer exact.",
+    "Keep the core fixed once it is set. A question that changes wording between runs cannot be trended.",
+    "evidenceGrade is confidence that people ask it, NOT how commercially valuable it is. That is what priority is for, which is why grade C plus P0 is a valid row."
+  ],
+
+  "cohorts": {
+    "generic": "The category question, your brand name absent. This is the cohort that measures whether you exist to an answer engine.",
+    "brand-defence": "Your brand named in the question. Measures whether the engine describes you correctly, and it will almost always mention you by construction. Never averaged with generic."
+  },
+
+  "queries": [
+    {
+      "id": "Q001",
+      "cohort": "generic",
+      "query": "what is the best api for scraping product reviews at scale",
+      "sourceType": "exact",
+      "sourceUrl": "https://www.reddit.com/r/webscraping/comments/xxxxxxx/",
+      "evidenceGrade": "A",
+      "priority": "P0"
+    },
+    {
+      "id": "Q002",
+      "cohort": "generic",
+      "query": "how do I get company data into an AI agent without signing up for five vendors",
+      "sourceType": "naturalized",
+      "sourceUrl": "https://www.reddit.com/r/AI_Agents/comments/xxxxxxx/",
+      "evidenceGrade": "B",
+      "priority": "P1"
+    },
+    {
+      "id": "Q003",
+      "cohort": "brand-defence",
+      "query": "what is Example and is it any good",
+      "sourceType": "synthesized",
+      "sourceUrl": "",
+      "evidenceGrade": "C",
+      "priority": "P0"
+    }
+  ]
+}
