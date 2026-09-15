@@ -20,7 +20,7 @@ answer engine probes ──→ geo-monitor ┘        │
 | **seo-intake** | Pulls the organic keyword set for your domain and each competitor, computes the gap locally, and routes every keyword to the one action that can help it: write-new, striking, build-depth, defend, or noise. |
 | **geo-monitor** | Measures whether AI answer engines mention, recommend and cite you. Puts a fixed registry of real user questions to an answer engine, detects the three signals plus competitors, and turns "a rival is named and we are not" into a tracked queue. Optionally cross checks citation counts across eight assistants. |
 | **content-thicken** | The writing driver. Takes one target from the fused library, pulls the real questions it must answer, drafts a long-form guide against a template contract, validates deterministically, and stops at preview. |
-| **backlink-outreach** | Prospects come from the citation data rather than a generic blog search, so every target is a page that already shapes an answer you lose. Ten steps from research to verified placement, with a tracker that enforces its own state rules. |
+| **backlink-outreach** | Prospects come from the citation data rather than a generic blog search, so every target is a page that already shapes an answer you lose. Ten steps from research to verified placement, with a tracker that enforces its own state rules. An authority floor set to your own Domain Rating gates every prospect before it is scored, and paid placements are refused at any DR. |
 
 ## Why the data layer is Monid
 

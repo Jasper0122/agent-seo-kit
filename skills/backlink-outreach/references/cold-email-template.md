@@ -32,7 +32,8 @@ Hi [Name],
 I read your article, "[Article Title]," and found [specific point] useful,
 particularly [the actual argument, in your own words].
 
-[One sentence on what you do. No feature list.]
+[One sentence on what you do. No feature list.] We are DR [your measured DR]
+on Ahrefs as of [date], if that is useful for sizing the trade.
 
 We would be glad to include and link to [Product/Company] in a relevant guide
 of ours. Would you be open to mentioning [Your Product] in a relevant article
@@ -135,6 +136,38 @@ date and the input, lands harder than any adjective:
 
 If there is no measured number for this topic, offer the reference pack instead
 and say nothing about your own performance.
+
+### Your own Domain Rating is the one performance number you may print
+
+DR is the exception to the rule above, because it is a third party number the
+recipient can check in thirty seconds rather than a claim they take on trust.
+It belongs in the email for one practical reason: an exchange is a trade, and
+the counterparty cannot size a trade without knowing what they are getting.
+
+**Measure it, never copy it from a file.** DR moves. One site running this kit
+was 30 on the last day of August and 53 two weeks later, so a stale figure goes
+wrong fast, and wrong in the direction that makes you look worse.
+
+```bash
+monid run -p ahrefs -e /site-explorer/domain-rating \
+  --query '{"target":"<your domain>","date":"<today>"}'
+```
+
+Write it with the date attached, and stop there:
+
+> We are DR 53 on Ahrefs as of 14 September, if that is useful for sizing the
+> trade.
+
+Three things stay out. **Never assert the trade is fair or even.** State your
+number and let them do the arithmetic; under the Step 2b floor every prospect
+is at or above you anyway, so claiming parity will sometimes be false and
+always sounds like negotiating. **Never quote their DR back at them.** You
+measured it; they did not ask and it reads as a report run before hello.
+**Never pair it with traffic, ranking, funding or customer numbers**, which
+stay banned. One number, one date, one clause.
+
+If a recipient replies with a DR below yours, the answer is still no, and
+Step 2b already made that decision before this email was drafted.
 
 ## Reciprocity, two variants
 

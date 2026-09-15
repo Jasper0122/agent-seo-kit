@@ -113,6 +113,79 @@ and a confidence note. Source preference, best first: an inbound message, an
 official partnership or contact page, the help centre, a named employee author,
 then a clearly labelled third party.
 
+## Step 2b: the authority floor, which is a gate and not a score
+
+Apply this before anything is scored, pitched or drafted. A prospect below the
+floor is not a low-scoring prospect. It is not a prospect.
+
+**The floor is your own Domain Rating.** Not a constant. Measure your own
+number at the start of every batch and compare each candidate against it, so
+the bar rises as you do.
+
+```bash
+monid run -p ahrefs -e /site-explorer/domain-rating \
+  --query '{"target":"<your domain>","date":"<today>"}'
+
+monid run -p ahrefs -e /site-explorer/domain-rating \
+  --query '{"target":"<their domain>","date":"<today>"}'
+```
+
+Why a floor at all. On one site this kit was run against, Domain Rating moved
+25 to 30 over three months while referring domains went 122 to 324. Volume did
+almost nothing. The nineteen point jump that followed came from six DR 90+
+domains landing in a single week. A link from below your own DR does not move
+the number and costs the same week of work as one that does.
+
+### Three checks a Domain Rating will not catch
+
+DR is a backlink metric and it can be inflated. Run these on anything that
+clears the floor.
+
+```bash
+monid run -p ahrefs -e /site-explorer/metrics \
+  --query '{"target":"<domain>","date":"<today>","mode":"domain","country":"us"}'
+
+monid run -p ahrefs -e /site-explorer/backlinks-stats \
+  --query '{"target":"<domain>","date":"<today>","mode":"domain"}'
+```
+
+**Dead shell.** Many referring domains, near zero organic traffic, near zero
+ranking keywords. Reject whatever the DR says. A real example offered as a
+partner: DR 6, 361 referring domains, 0 US traffic, 0 keywords. Referring
+domains without traffic means somebody bought them.
+
+**Inflated DR.** Backlinks divided by referring domains above roughly 20 means
+sitewide, footer or badge links rather than editorial ones. A real example: a
+directory at DR 74 carrying 341,070 backlinks from 3,816 domains, which
+converted into 167 ranking keywords. Not an automatic rejection, but score
+authority as if the DR were far lower, and prefer a free listing to an email.
+
+**Link shop neighbourhood.** Referring domains named like `backlinkshop.site`
+or `linkbooster.shop`. If a prospect's profile is built from these, reject.
+
+### Paid placement is refused, at any Domain Rating
+
+Priced menus (a rate card for link insertions and guest posts), brokers reselling
+placements on third party sites, and any seller advertising that they omit
+sponsored labelling.
+
+Selling followed links without disclosure is what Google's link spam policy
+names, and buying them is a violation on the buyer's side too. Offer a content
+exchange instead. A site worth having usually accepts one; a site that will
+only take cash is telling you what the link is worth.
+
+Before any money conversation, check whether the site has a free submission or
+"write for us" route. One placement a broker quoted us three figures for turned
+out to have an open self-submission form two clicks from its homepage.
+
+### The trap this gate creates, and why it is worth it
+
+An audience filter (company size, niche, language) and an authority floor pull
+against each other. Expect output to fall, sometimes sharply. That is the gate
+working. Make the daily target a **ceiling rather than a quota**, and report the
+funnel honestly: candidates found, passed the audience filter, passed the floor,
+drafted. Never backfill with weaker domains to hit a number.
+
 ## Step 3: test the workflow fit before scoring anything
 
 State both products as one sentence, in order:
@@ -137,7 +210,7 @@ Score each dimension 1 to 5, then `score = sum(dimension / 5 * weight)`.
 |---|---:|---|
 | GEO citation strength | 25 | Cited repeatedly on questions where you were absent |
 | Workflow complementarity | 20 | Clearly the adjacent step, not a substitute |
-| Domain authority | 20 | Measured, not inferred |
+| Domain authority | 20 | Clears the Step 2b floor with room, and the DR converts into ranking keywords rather than sitting on badge links |
 | Content activity | 15 | Recent, sustained, useful publishing |
 | Contactability | 10 | A named editor, founder or official channel exists |
 | Natural link space | 10 | A specific existing page where you genuinely belong |
